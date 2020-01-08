@@ -1,8 +1,6 @@
 package PersonalPractices;
 
-import java.util.Collections;
-
-public class Deneme {
+public class SumDigitsInString {
     public static void main(String[] args) {
 
     }
