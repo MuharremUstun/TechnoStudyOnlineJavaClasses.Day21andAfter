@@ -1,12 +1,39 @@
 package PersonalPractices;
 
+import java.lang.module.FindException;
+
 public class LinearIn {
     public static void main(String[] args) {
-        int[] outer = {1,2,4,6};
-        int[] inner = {2,4};
-        System.out.println(linearIn(outer,inner));
-//        int n = 0;
-//        int[] square = new int[n*n];
+        int[] outer = {-1, 0, 3, 3, 3, 10, 12};
+        int[] inner = {0, 3, 12, 14};
+//        boolean result = linearIn(outer,inner);
+        boolean result = linearIn2(outer,inner);
+        System.out.println(result);
+    }
+
+    private static boolean linearIn2(int[] outer, int[] inner) {
+        int index = 0;
+        boolean res = true;
+        for (int i = 0; i < inner.length; i++) {
+            for (int o = index; o < outer.length; o++) {
+                if (outer[o] == inner[i]) {
+                    index = o+1;
+                    if (o == outer.length-1 && i != inner.length - 1 ) {
+                        res = false;
+                    }
+                    break;
+                }
+                if (o == outer.length-1 /* && i != inner.length - 1 */) {
+                    res = false;
+                    break;
+                }
+//                if(index == outer.length) {
+//                    res = false;
+//                    break;
+//                }
+            }
+        }
+        return res;
     }
 
     static boolean linearIn(int[] outer, int[] inner) {
