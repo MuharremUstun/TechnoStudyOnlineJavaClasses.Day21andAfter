@@ -146,19 +146,31 @@ public class HashMapExercises {
 
         //17. Count each letter in a string array and record them in a map.
         System.out.println("\nTask 17 --------------------------------");
-        String arr = "BECOME A SOFTWARE ENGINEER IN 6 MONTHS!";
+        String arr = "BECOME A SOFTWARE TEST ENGINEER IN 6 MONTHS!";
         HashMap<Character, Integer> numsOfChars = new HashMap<>();
+        for (int i = 0; i < arr.length(); i++) {
+            if (numsOfChars.containsKey(arr.charAt(i))) {
+                int val = numsOfChars.get(arr.charAt(i));
+                val++;
+                numsOfChars.put(arr.charAt(i), val);
+            } else {
+                numsOfChars.put(arr.charAt(i), 1);
+            }
+        }
+        System.out.println(numsOfChars);
+        // 2. way ---------------------------------
+        HashMap<Character, Integer> numsOfChars2 = new HashMap<>();
         for( int i = 0; i < arr.length(); i++) {
             char ch = arr.charAt(i);
-            if (!numsOfChars.containsKey(ch)) {
+            if (!numsOfChars2.containsKey(ch)) {
                 int charCounter = 0;
                 for (int j = i; j < arr.length(); j++) {
                     if (arr.charAt(j) == ch) charCounter++;
                 }
-                numsOfChars.put(ch, charCounter);
+                numsOfChars2.put(ch, charCounter);
             }
         }
-        System.out.println(numsOfChars);
+        System.out.println(numsOfChars2);
 
 
 
