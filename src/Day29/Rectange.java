@@ -1,5 +1,7 @@
 package Day29;
 
+import java.util.Collections;
+
 public class Rectange {
     double a;
     double b;
@@ -24,5 +26,10 @@ class Calculate {
         double area = rect1.getArea();
         System.out.println("The perimeter is " + perimeter);
         System.out.println("The area is " + area);
+
+
+//        Math.random();
     }
+
+
 }
