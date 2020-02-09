@@ -4,12 +4,13 @@ public class Car {
     public String name;
     public int year;
 
-    Profile profile = new Profile();
+    public Profile profile;
 
     public Car(String name, int year, String color, int numberOfDoors, double engine) {
         this.name = name;
         this.year = year;
 
+        profile = new Profile();
         profile.color = color;
         profile.numberOfDoors = numberOfDoors;
         profile.engine = engine;
