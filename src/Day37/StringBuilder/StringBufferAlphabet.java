@@ -13,7 +13,6 @@ public class StringBufferAlphabet {
     }
 
 
-
     @Test
     public void testAlphabet (){
         Assertions.assertEquals("ABCDEFGHIJKLMNOPQRSTUVWXYZ", alphabet());
